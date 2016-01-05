@@ -18,7 +18,7 @@ class StatusMenuController: NSObject {
         {
             try SMCKit.open()
             self.sensors = try SMCKit.allKnownTemperatureSensors().sort
-                { $1.name < $0.name }
+                { $0.name < $1.name }
             
             
         } catch {
@@ -30,7 +30,7 @@ class StatusMenuController: NSObject {
     override func awakeFromNib() {
         statusItem.menu = statusMenu
         var max_temperature = 0.0
-        for sensor in sensors
+        for sensor in sensors.reverse()
         {
             guard let temperature = try? SMCKit.temperature(sensor.code) else { continue }
             if (temperature > max_temperature)
@@ -50,7 +50,7 @@ class StatusMenuController: NSObject {
     func update() {
         var counter = 0
         var max_temperature = 0.0
-        for sensor in sensors
+        for sensor in sensors.reverse()
         {
             guard let temperature = try? SMCKit.temperature(sensor.code) else { continue }
             if (temperature > max_temperature)
