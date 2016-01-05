@@ -46,5 +46,21 @@ class StatusMenuController: NSObject {
     func callback(sender: AnyObject) {
         
     }
+    
+    func update() {
+        var counter = 0
+        var max_temperature = 0.0
+        for sensor in sensors
+        {
+            guard let temperature = try? SMCKit.temperature(sensor.code) else { continue }
+            if (temperature > max_temperature)
+            {
+                max_temperature = temperature
+            }
+            statusMenu.itemAtIndex(counter)!.title = "\(sensor.name): \(temperature)°C"
+            counter++
+        }
+        statusItem.title = "\(max_temperature)°C"
+    }
 
 }

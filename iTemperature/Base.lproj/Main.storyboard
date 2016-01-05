@@ -642,7 +642,11 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="iTemperature" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="iTemperature" customModuleProvider="target">
+                    <connections>
+                        <outlet property="statusMenuController" destination="7im-yM-PdT" id="8fh-EJ-h6a"/>
+                    </connections>
+                </customObject>
                 <customObject id="7im-yM-PdT" userLabel="StatusMenuController" customClass="StatusMenuController" customModule="iTemperature" customModuleProvider="target">
                     <connections>
                         <outlet property="statusMenu" destination="K1I-r4-Lw3" id="POB-Hv-Syd"/>
@@ -653,6 +657,9 @@
                     <items>
                         <menuItem title="Settings" id="nsw-1x-yiG">
                             <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <segue destination="EWw-Uh-jfu" kind="modal" id="UQE-Np-CXL"/>
+                            </connections>
                         </menuItem>
                         <menuItem title="Quit" id="QVc-Gy-qJ4">
                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -682,6 +689,38 @@
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="xow-iY-2kd">
+            <objects>
+                <windowController id="EWw-Uh-jfu" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="slX-WW-4SM">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="245" y="301" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                    </window>
+                    <connections>
+                        <segue destination="kIX-DY-JLB" kind="relationship" relationship="window.shadowedContentViewController" id="BDx-6g-8wI"/>
+                    </connections>
+                </windowController>
+                <customObject id="QhF-Bs-tAP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="171"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QZV-Kl-HxC">
+            <objects>
+                <viewController id="kIX-DY-JLB" sceneMemberID="viewController">
+                    <view key="view" id="Knz-G8-rz8">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </view>
+                </viewController>
+                <customObject id="8Pl-oQ-oPa" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1403" y="146"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
