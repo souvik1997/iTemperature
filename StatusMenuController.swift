@@ -18,7 +18,7 @@ class StatusMenuController: NSObject {
         {
             try SMCKit.open()
             self.sensors = try SMCKit.allKnownTemperatureSensors().sort
-                { $0.name < $1.name }
+                { $1.name < $0.name }
             
             
         } catch {
