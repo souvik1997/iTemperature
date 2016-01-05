@@ -1,3 +1,4 @@
 [submodule "lib/SMCKit"]
 	path = lib/SMCKit
-	url = https://github.com/beltex/SMCKit
+	url = git@github.com:souvik1997/SMCKit.git
+	branch = souvik
