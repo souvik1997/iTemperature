@@ -50,7 +50,7 @@ class StatusMenuController: NSObject {
     func update() {
         var counter = 0
         var max_temperature = 0.0
-        for sensor in sensors.reverse()
+        for sensor in sensors
         {
             guard let temperature = try? SMCKit.temperature(sensor.code) else { continue }
             if (temperature > max_temperature)
