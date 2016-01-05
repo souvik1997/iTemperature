@@ -1,0 +1,3 @@
+[submodule "lib/SMCKit"]
+	path = lib/SMCKit
+	url = https://github.com/beltex/SMCKit

@@ -13,6 +13,9 @@
 		9D4D952C1C3B13B300F2621A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4D952A1C3B13B300F2621A /* Main.storyboard */; };
 		9D4D95371C3B13B300F2621A /* iTemperatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D95361C3B13B300F2621A /* iTemperatureTests.swift */; };
 		9D4D95421C3B13B300F2621A /* iTemperatureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D95411C3B13B300F2621A /* iTemperatureUITests.swift */; };
+		9D79FDE91C3B1F0F00EBDE08 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D79FDE81C3B1F0F00EBDE08 /* StatusMenuController.swift */; };
+		9D79FDFF1C3B268800EBDE08 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D79FDFC1C3B268800EBDE08 /* Info.plist */; };
+		9D79FE001C3B268800EBDE08 /* SMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D79FDFD1C3B268800EBDE08 /* SMC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,10 @@
 		9D4D953D1C3B13B300F2621A /* iTemperatureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTemperatureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4D95411C3B13B300F2621A /* iTemperatureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTemperatureUITests.swift; sourceTree = "<group>"; };
 		9D4D95431C3B13B300F2621A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D79FDE81C3B1F0F00EBDE08 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusMenuController.swift; path = ../StatusMenuController.swift; sourceTree = "<group>"; };
+		9D79FDFC1C3B268800EBDE08 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D79FDFD1C3B268800EBDE08 /* SMC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMC.swift; sourceTree = "<group>"; };
+		9D79FDFE1C3B268800EBDE08 /* SMCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +82,7 @@
 		9D4D95181C3B13B200F2621A = {
 			isa = PBXGroup;
 			children = (
+				9D79FDFB1C3B268800EBDE08 /* SMCKit */,
 				9D4D95231C3B13B200F2621A /* iTemperature */,
 				9D4D95351C3B13B300F2621A /* iTemperatureTests */,
 				9D4D95401C3B13B300F2621A /* iTemperatureUITests */,
@@ -95,6 +103,7 @@
 		9D4D95231C3B13B200F2621A /* iTemperature */ = {
 			isa = PBXGroup;
 			children = (
+				9D79FDE81C3B1F0F00EBDE08 /* StatusMenuController.swift */,
 				9D4D95241C3B13B200F2621A /* AppDelegate.swift */,
 				9D4D95261C3B13B200F2621A /* ViewController.swift */,
 				9D4D95281C3B13B200F2621A /* Assets.xcassets */,
@@ -120,6 +129,17 @@
 				9D4D95431C3B13B300F2621A /* Info.plist */,
 			);
 			path = iTemperatureUITests;
+			sourceTree = "<group>";
+		};
+		9D79FDFB1C3B268800EBDE08 /* SMCKit */ = {
+			isa = PBXGroup;
+			children = (
+				9D79FDFC1C3B268800EBDE08 /* Info.plist */,
+				9D79FDFD1C3B268800EBDE08 /* SMC.swift */,
+				9D79FDFE1C3B268800EBDE08 /* SMCKit.h */,
+			);
+			name = SMCKit;
+			path = lib/SMCKit/SMCKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +248,7 @@
 			files = (
 				9D4D95291C3B13B200F2621A /* Assets.xcassets in Resources */,
 				9D4D952C1C3B13B300F2621A /* Main.storyboard in Resources */,
+				9D79FDFF1C3B268800EBDE08 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,8 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D79FDE91C3B1F0F00EBDE08 /* StatusMenuController.swift in Sources */,
 				9D4D95271C3B13B200F2621A /* ViewController.swift in Sources */,
 				9D4D95251C3B13B200F2621A /* AppDelegate.swift in Sources */,
+				9D79FE001C3B268800EBDE08 /* SMC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +498,7 @@
 				9D4D95481C3B13B300F2621A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D4D95491C3B13B300F2621A /* Build configuration list for PBXNativeTarget "iTemperatureTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +507,7 @@
 				9D4D954B1C3B13B300F2621A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D4D954C1C3B13B300F2621A /* Build configuration list for PBXNativeTarget "iTemperatureUITests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +516,7 @@
 				9D4D954E1C3B13B300F2621A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
