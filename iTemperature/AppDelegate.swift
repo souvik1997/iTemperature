@@ -18,7 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var statusMenuController: StatusMenuController!
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        let timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "update", userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "update", userInfo: nil, repeats: true)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
