@@ -1,4 +1,4 @@
 [submodule "lib/SMCKit"]
 	path = lib/SMCKit
-	url = git@github.com:souvik1997/SMCKit.git
+	url = https://github.com/souvik1997/SMCKit.git
 	branch = souvik
